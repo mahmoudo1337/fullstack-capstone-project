@@ -19,7 +19,7 @@ app.{{insert method here}}('{{insert route here}}', async (req, res) => {
 
     // Task 4: extract the sentence parameter
     const { sentence } = {{insert code here}};
-
+    
 
     if (!sentence) {
         logger.error('No sentence provided');
