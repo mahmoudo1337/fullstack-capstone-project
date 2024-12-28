@@ -1,4 +1,6 @@
 const connectToDatabase = require("../models/db");
+const express = require("express");
+const router = express.Router();
 
 router.get("/", async (req, res) => {
   try {
@@ -35,7 +37,6 @@ router.get("/:id", async (req, res) => {
     if (!gift) {
       return res.status(404).send("Gift not found");
     }
-
     res.json(gift);
   } catch (e) {
     console.error("Error fetching gift:", e);
